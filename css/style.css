@@ -79,13 +79,58 @@ h1 {
 .timer .minutes .number,
 .timer .seconds .number {
   background: hsl(236deg, 21%, 26%);
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   padding: 3rem 5rem;
   font-size: 10rem;
   color: hsl(345deg, 95%, 68%);
   font-weight: bold;
-  letter-spacing: 5px;
   box-shadow: 0 15px 0px 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+.timer .days .number::before,
+.timer .hours .number::before,
+.timer .minutes .number::before,
+.timer .seconds .number::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transform: perspective(1000px) rotateX(0deg);
+}
+.timer .days .number .dot-1,
+.timer .days .number .dot-2,
+.timer .hours .number .dot-1,
+.timer .hours .number .dot-2,
+.timer .minutes .number .dot-1,
+.timer .minutes .number .dot-2,
+.timer .seconds .number .dot-1,
+.timer .seconds .number .dot-2 {
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  z-index: 2;
+  background: #191a24;
+}
+.timer .days .number .dot-1,
+.timer .hours .number .dot-1,
+.timer .minutes .number .dot-1,
+.timer .seconds .number .dot-1 {
+  left: 0%;
+  transform: translate(-50%, -50%);
+}
+.timer .days .number .dot-2,
+.timer .hours .number .dot-2,
+.timer .minutes .number .dot-2,
+.timer .seconds .number .dot-2 {
+  right: 0%;
+  transform: translate(50%, -50%);
 }
 .timer .days .text,
 .timer .hours .text,
