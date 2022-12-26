@@ -1,0 +1,14 @@
+{
+	"name": "launch-countdown-timer",
+	"version": "1.0.0",
+	"description": "Launch countdown timer challenge on Frontend Mentor",
+	"main": "index.js",
+	"author": "AmkaE",
+	"license": "MIT",
+	"scripts": {
+		"sass": "sass --watch sass:css"
+	},
+	"dependencies": {
+		"sass": "^1.57.1"
+	}
+}

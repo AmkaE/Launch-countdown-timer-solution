@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+
+$very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+$dark-desaturated-blue: hsl(236, 21%, 26%);
+$attribution-link: hsl(228, 45%, 44%);
+$very-dark-blue: hsl(235, 16%, 14%);
+$grayish-blue: hsl(237, 18%, 59%);
+$soft-red: hsl(345, 95%, 68%);
+$white: hsl(0, 0%, 100%);
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	font-family: 'Red Hat Text', sans-serif;
+}
+
+body {
+	background-color: $very-dark-mostly-black-blue;
+	color: $white;
+	line-height: 1.5;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+
+	& a {
+		color: $attribution-link;
+	}
+}
